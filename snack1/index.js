@@ -15,3 +15,49 @@
 4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
  */
+
+const basketPlayer = [
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9)}`,
+        name: '',
+        surname: '',
+        age: '',
+        averagePoints: '',
+        averageThreePointers: '',
+    }
+];
+
+console.table(basketPlayer);
+
+/**
+ * Generate random letters
+ */
+
+function generateRandomLetter(length) {
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    let result = '';
+
+    for (let i = 0; i < length; i++) {
+
+        result += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+
+    }
+
+    return result;
+
+};
+
+/**
+ * Generate random numbers
+ */
+
+function getRandomNumber(min, max) {
+
+    let numbers = '';
+    for (let i = 0; i < 3; i++) {
+        numbers += (Math.floor(Math.random() * max) + min);
+    }
+
+    return numbers;
+}
