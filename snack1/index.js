@@ -23,14 +23,14 @@ const basketPlayers = [
         surname: 'James',
         age: '36',
         averagePoints: `${getRandomNumber(0, 50, 1)}`,
-        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}%`,
     },
 ];
 
 console.table(basketPlayers);
 
-const {name, surname, age, playerCode} = basketPlayers;
-console.log(name, surname, age, playerCode);
+const {name, surname, age, playerCode} = basketPlayers[0];
+console.log('Nome:', name, 'Cognome:', surname, 'Età:', age, 'Codice giocatore:', playerCode);
 
 
 
