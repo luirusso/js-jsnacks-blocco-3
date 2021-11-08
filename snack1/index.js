@@ -23,16 +23,98 @@ const basketPlayers = [
         surname: 'James',
         age: '36',
         averagePoints: `${getRandomNumber(0, 50, 1)}`,
-        averageThreePointers: `${getRandomNumber(0, 100, 1)}%`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Kevin',
+        surname: 'Durant',
+        age: '28',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Giannis',
+        surname: 'Antetokounmpo',
+        age: '37',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Stephen',
+        surname: 'Curry',
+        age: '24',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'James',
+        surname: 'Harden',
+        age: '29',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Kawhi',
+        surname: 'Leonard',
+        age: '36',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Nikola',
+        surname: 'Jokic',
+        age: '33',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Joel',
+        surname: 'Embiid',
+        age: '32',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Luca',
+        surname: 'Doncic',
+        age: '22',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
+    },
+    {
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'Anthony',
+        surname: 'Davis',
+        age: '31',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
     },
 ];
+
+const filteredPlayers = [];
 
 console.table(basketPlayers);
 
 const {name, surname, age, playerCode} = basketPlayers[0];
 console.log('Nome:', name, 'Cognome:', surname, 'Età:', age, 'Codice giocatore:', playerCode);
 
+for (let i = 0; i < basketPlayers.length; i++) {
 
+    if ((basketPlayers[i].averagePoints > 35) && (basketPlayers[i].averageThreePointers >= 80)) {
+        filteredPlayers.push(basketPlayers[i]);
+    }
+}
+
+console.log(filteredPlayers);
+console.table(filteredPlayers);
 
 /**
  * Generate random letters
