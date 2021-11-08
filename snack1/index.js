@@ -18,22 +18,25 @@
 
 const basketPlayer = [
     {
-        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9)}`,
-        name: '',
-        surname: '',
-        age: '',
-        averagePoints: '',
-        averageThreePointers: '',
+        playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
+        name: 'LeBron',
+        surname: 'James',
+        age: '36',
+        averagePoints: `${getRandomNumber(0, 50, 1)}`,
+        averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
     }
 ];
 
 console.table(basketPlayer);
+
+
 
 /**
  * Generate random letters
  */
 
 function generateRandomLetter(length) {
+
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     let result = '';
@@ -52,12 +55,15 @@ function generateRandomLetter(length) {
  * Generate random numbers
  */
 
-function getRandomNumber(min, max) {
+function getRandomNumber(min, max, length) {
 
     let numbers = '';
-    for (let i = 0; i < 3; i++) {
+
+    for (let i = 0; i < length; i++) {
+
         numbers += (Math.floor(Math.random() * max) + min);
+
     }
 
     return numbers;
-}
+};
