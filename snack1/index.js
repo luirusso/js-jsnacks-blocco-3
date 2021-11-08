@@ -101,6 +101,16 @@ const basketPlayers = [
 
 const filteredPlayers = [];
 
+// const filteredPlayers = basketPlayers.filter((averageThreePointers, averagePoints) =>  {
+    
+//     if((averagePoints > 35) && (averageThreePointers >= 80)) {
+
+//         return true;
+//     } 
+
+//     return false;
+// });
+
 console.table(basketPlayers);
 
 const {name, surname, age, playerCode} = basketPlayers[0];
@@ -112,6 +122,8 @@ for (let i = 0; i < basketPlayers.length; i++) {
         filteredPlayers.push(basketPlayers[i]);
     }
 }
+
+
 
 console.log(filteredPlayers);
 console.table(filteredPlayers);
