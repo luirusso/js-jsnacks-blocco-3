@@ -16,7 +16,7 @@
 5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
  */
 
-const basketPlayer = [
+const basketPlayers = [
     {
         playerCode: `${generateRandomLetter(3) + getRandomNumber(0, 9, 3)}`,
         name: 'LeBron',
@@ -24,10 +24,13 @@ const basketPlayer = [
         age: '36',
         averagePoints: `${getRandomNumber(0, 50, 1)}`,
         averageThreePointers: `${getRandomNumber(0, 100, 1)}`,
-    }
+    },
 ];
 
-console.table(basketPlayer);
+console.table(basketPlayers);
+
+const {name, surname, age, playerCode} = basketPlayers;
+console.log(name, surname, age, playerCode);
 
 
 
